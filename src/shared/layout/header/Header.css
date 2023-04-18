@@ -1,0 +1,14 @@
+.Page-header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.Page-headerTitle {
+
+}
+.Page-headerNav {
+    display:flex;
+    align-items: center;
+    gap:1rem;
+}
+.Page-headerNavLink {}

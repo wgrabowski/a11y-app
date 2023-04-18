@@ -1,3 +1,9 @@
+import "./Footer.css";
+import { PageLogo } from "../../ui/page-logo/SiteLogo";
 export const Footer = () => {
-    return (<footer>baj</footer>)
-}
+	return (
+		<footer className="Page-footer">
+			<PageLogo />
+		</footer>
+	);
+};
