@@ -1,0 +1,19 @@
+.Story {
+	display: flex;
+
+	margin: 0 auto;
+	max-width: 90vw;
+	justify-content: space-between;
+}
+.Story:nth-child(odd) {
+	flex-direction: row-reverse;
+}
+.Story-image {
+	height: 200px;
+	aspect-ratio: 4/3;
+	object-fit: cover;
+	flex: 0 1 30%;
+}
+.Story-caption {
+	flex: 0 1 30%;
+}

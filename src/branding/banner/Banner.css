@@ -1,0 +1,11 @@
+.Banner {
+	width: 100vw;
+	background: lightcoral;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.Banner-text {
+	max-width: 46ch;
+	text-align: center;
+}

@@ -1,0 +1,22 @@
+.Explore {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.Explore-features {
+	display: flex;
+	justify-content: space-around;
+	flex-flow: row wrap;
+}
+
+.Explore-feature {
+	text-align: center;
+	flex: 0 0 200px;
+	margin: 0;
+}
+
+.Explore-featurePhoto {
+	width: 200px;
+	clear: both;
+}
