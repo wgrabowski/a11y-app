@@ -1,0 +1,46 @@
+body,
+html,
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 10px;
+}
+
+body {
+	font-size: 1.6rem;
+	font-family: "Schibsted Grotesk", "Segoe UI", Arial, sans-serif;
+	background: var(--ti-background-color);
+	color: var(--ti-text-color);
+}
+
+a {
+	color: var(--ti-link-color);
+	text-decoration: underline;
+	text-decoration-thickness: 2px;
+}
+a:visited {
+	color: var(--ti-link-visited-color);
+}
+a:hover {
+	color: var(--ti-link-hover-color);
+	text-decoration-thickness: 4px;
+}
+a:focus-visible {
+	color: var(--ti-focus-text-color);
+	background: var(--ti-focus-color);
+	outline: 0;
+	text-decoration-thickness: 4px;
+}
+
+h1 {
+	font-size: 3.6rem;
+}
+h2 {
+	font-size: 2.4rem;
+}
+h3 {
+	font-size: 1.9rem;
+}

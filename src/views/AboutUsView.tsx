@@ -1,3 +1,8 @@
 export const AboutUsView = () => {
-	return <div>about us</div>;
+	return (
+		<section>
+			<h2>About us</h2>
+			<p>This page about us</p>
+		</section>
+	);
 };

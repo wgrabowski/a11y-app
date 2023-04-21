@@ -1,3 +1,10 @@
+import { ClaimReportForm } from "../claim";
+
 export const ClaimReportView = () => {
-	return <div>claim report</div>;
+	return (
+		<>
+			<h2>claim report</h2>
+			<ClaimReportForm />
+		</>
+	);
 };

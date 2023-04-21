@@ -1,0 +1,44 @@
+/* colors taken from https://design-system.service.gov.uk/styles/colour/*/
+:root {
+	--ti-background-color: #fffff;
+	--ti-text-color: #0b0c0c;
+	--ti-secondary-text-color: #505a5f;
+
+	--ti-link-color: #1d70b8;
+	--ti-link-hover-color: #003078;
+	--ti-link-visited-color: #4c2c92;
+	--ti-link-active-color: #0b0c0c;
+
+	--ti-border-color: #b1b4b6;
+	--ti-input-border-color: #0b0c0c;
+
+	--ti-focus-color: #ffdd00;
+	--ti-focus-text-color: #0b0c0c;
+
+	--ti-error-color: #d4351c;
+
+	--ti-success-color: #00703c;
+
+	--ti-brand-color: #1d70b8;
+
+	--ti-color-red: #d4351c;
+	--ti-color-yellow: #ffdd00;
+	--ti-color-green: #00703c;
+	--ti-color-blue: #1d70b8;
+	--ti-color-dark-blue: #003078;
+	--ti-color-light-blue: #5694ca;
+	--ti-color-purple: #4c2c92;
+	--ti-color-black: #0b0c0c;
+	--ti-color-dark-grey: #505a5f;
+	--ti-color-mid-grey: #b1b4b6;
+	--ti-color-light-grey: #f3f2f1;
+	--ti-color-white: #ffffff;
+	--ti-color-light-purple: #6f72af;
+	--ti-color-bright-purple: #912b88;
+	--ti-color-pink: #d53880;
+	--ti-color-light-pink: #f499be;
+	--ti-color-orange: #f47738;
+	--ti-color-brown: #b58840;
+	--ti-color-light-green: #85994b;
+	--ti-color-turquoise: #28a197;
+}

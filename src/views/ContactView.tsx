@@ -1,3 +1,8 @@
 export const ContactView = () => {
-	return <div>Contact</div>;
+	return (
+		<section>
+			<h2>Contact</h2>
+			<p>This contact page</p>
+		</section>
+	);
 };
