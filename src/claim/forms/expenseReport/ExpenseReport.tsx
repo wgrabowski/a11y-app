@@ -6,10 +6,14 @@ import { ExpenseModal } from "./expenses/ExpenseModal";
 import { PlusCircle, X } from "react-feather";
 
 interface ExpenseReportProps {
-	onCompleted: (step: boolean) => void;
+	onCompleted: (step: number) => void;
+	onSubmit: () => void;
 }
 
-export const ExpenseReport = ({ onComplete }: ExpenseReportProps) => {
+export const ExpenseReport = ({
+	onCompleted,
+	onSubmit,
+}: ExpenseReportProps) => {
 	const [addModalOpen, setAddModalOpen] = useState(false);
 	const [expenses, setExpenses] = useState<IncidentExpense[]>([]);
 	const [currentAlert, setCurrentAlert] = useState<string | null>();
@@ -71,7 +75,7 @@ export const ExpenseReport = ({ onComplete }: ExpenseReportProps) => {
 				>
 					Back
 				</button>
-				<button onClick={onSubmit()}>Next</button>
+				<button onClick={() => onSubmit()}>Next</button>
 			</div>
 			<div role="alert" aria-live="assertive" className={"Alert"}>
 				{currentAlert && (

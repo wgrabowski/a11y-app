@@ -8,6 +8,9 @@ export const ClaimReportForm = () => {
 	const [firstStepValid, setFirstStepValid] = useState(false);
 	const [secondStepValid, setSecondStepValid] = useState(false);
 	const [submittedStep, setSubmittedStep] = useState<number | null>(null);
+
+	const submitAll = () => {};
+
 	return (
 		<>
 			<Stepper
@@ -33,7 +36,10 @@ export const ClaimReportForm = () => {
 						setSecondStepValid(valid);
 					}}
 				/>
-				<ExpenseReport />
+				<ExpenseReport
+					onCompleted={(step) => setSubmittedStep(step)}
+					onSubmit={() => submitAll()}
+				/>
 			</Stepper>
 		</>
 	);
