@@ -1,11 +1,20 @@
 .Banner {
 	width: 100vw;
-	background: lightcoral;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	background: var(--ti-color-blue);
+	color: var(--ti-color-white);
+	padding: 16rem 1rem;
+}
+.Banner-title {
+	font-size: 3.2rem;
 }
 .Banner-text {
 	max-width: 46ch;
 	text-align: center;
+	font-size: 1.9rem;
+}
+
+.Banner-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }

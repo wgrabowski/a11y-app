@@ -1,4 +1,7 @@
 .Explore {
+	margin: 8rem 0;
+}
+.Explore-content {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -12,11 +15,13 @@
 
 .Explore-feature {
 	text-align: center;
-	flex: 0 0 200px;
+	flex: 0 0 20%;
 	margin: 0;
 }
 
 .Explore-featurePhoto {
-	width: 200px;
+	width: 100%;
+	max-width: 300px;
 	clear: both;
+	object-fit: cover;
 }

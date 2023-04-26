@@ -1,0 +1,8 @@
+.Expense {
+	width: 100%;
+	display: grid;
+	align-items: center;
+	grid-template-columns: minmax(max-content, 10rem) 1fr min-content min-content;
+	grid-gap: 1rem;
+	margin-bottom: 1rem;
+}

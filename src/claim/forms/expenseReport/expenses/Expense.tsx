@@ -1,7 +1,8 @@
 import { IncidentExpense } from "./model";
 import { useState } from "react";
 import { ExpenseModal } from "./ExpenseModal";
-
+import { Edit, X } from "react-feather";
+import "./Expense.css";
 interface ExpenseProps {
 	name: string;
 	price: number;
@@ -21,8 +22,16 @@ export const Expense = ({ name, price, onRemove, onEdit }: ExpenseProps) => {
 			<li className={"Expense"}>
 				<strong>{currencyFormatter.format(price)}</strong>
 				<span>{name}</span>
-				<button onClick={() => onRemove()}>Remove</button>
-				<button onClick={() => setEditModalOpen(true)}>Edit</button>
+				<button className="icon" onClick={() => onRemove()}>
+					<X />
+				</button>
+				<button
+					className="icon"
+					onClick={() => setEditModalOpen(true)}
+					aria-haspopup={"dialog"}
+				>
+					<Edit />
+				</button>
 			</li>
 			{editModalOpen && (
 				<ExpenseModal

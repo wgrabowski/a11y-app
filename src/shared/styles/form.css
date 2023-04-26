@@ -1,0 +1,68 @@
+input,
+fieldset,
+textarea,
+label,
+legend {
+	width: 100%;
+	clear: both;
+	font-size: 1.9rem;
+}
+label,
+legend {
+	margin: 2rem 0 1rem;
+	font-weight: 600;
+}
+
+fieldset {
+	border: 0;
+	float: left;
+	padding: 0;
+	margin: 2rem 0 1rem;
+}
+fieldset > label {
+	font-weight: 400;
+}
+fieldset label,
+fieldset input {
+	width: auto;
+}
+input[type="radio"] {
+	width: 3rem;
+	height: 3rem;
+	margin: 1.5rem 0 1rem;
+	line-height: 4rem;
+}
+form {
+	accent-color: var(--ti-focus-text-color);
+	max-width: 60ch;
+	margin: 0 auto;
+}
+input:not([type="radio"]),
+textarea {
+	border: 2px solid var(--ti-focus-text-color);
+	line-height: 1.25;
+	height: 2.5rem;
+	margin-top: 0;
+	padding: 5px;
+	border-radius: 0;
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+input:focus-visible {
+	outline: 3px solid var(--ti-focus-color);
+	box-shadow: inset 0 0 0 2px;
+}
+
+input:not([type="radio"])[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+	border-color: var(--ti-error-color);
+}
+
+.Form-actions {
+	padding: 2rem;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: 0 auto;
+}

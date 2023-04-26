@@ -3,14 +3,14 @@ import { HomeView } from "../views/HomeView";
 import { AboutUsView } from "../views/AboutUsView";
 import { ClaimReportView } from "../views/ClaimReportView";
 import { ContactView } from "../views/ContactView";
+import { OtherView } from "../views/OtherView";
 
 export const AppRoutes = () => {
 	return (
 		<Routes>
 			<Route index={true} path={"/"} element={<HomeView />} />
-			<Route path={"/about"} element={<AboutUsView />} />
-			<Route index={true} path={"/report"} element={<ClaimReportView />} />
-			<Route index={true} path={"/contact"} element={<ContactView />} />
+			<Route path={"/page/:slug"} element={<OtherView />} />
+			<Route path={"/report"} element={<ClaimReportView />} />
 		</Routes>
 	);
 };

@@ -1,14 +1,25 @@
 .Page-header {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+	background: var(--ti-color-light-grey);
 }
-.Page-headerTitle {
+.Page-headerContent {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: baseline;
+}
 
+.Page-headerTitle {
 }
 .Page-headerNav {
-    display:flex;
-    align-items: center;
-    gap:1rem;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
 }
-.Page-headerNavLink {}
+.Page-headerNavLink {
+	color: var(--ti-brand-color);
+	line-height: 1.5;
+}
+
+.Page-headerNavLink.active {
+	font-weight: 600;
+}

@@ -1,4 +1,5 @@
 import "./Explore.css";
+import { Container } from "../../shared/layout/container/Container";
 export const Explore = () => {
 	const images = [
 		{
@@ -20,18 +21,20 @@ export const Explore = () => {
 	];
 	return (
 		<section className={"Explore"}>
-			<h2>Explore our travel topics</h2>
+			<Container className={"Explore-content"}>
+				<h2>Explore our travel topics</h2>
 
-			<div className="Explore-features">
-				{images.map(({ url, title }, index) => (
-					<figure key={index} className="Explore-feature">
-						<img src={url} alt={title} className="Explore-featurePhoto" />
-						<figcaption className="Explore-featureTitle">
-							<strong>{title}</strong>
-						</figcaption>
-					</figure>
-				))}
-			</div>
+				<div className="Explore-features">
+					{images.map(({ url, title }, index) => (
+						<figure key={index} className="Explore-feature">
+							<img src={url} alt={title} className="Explore-featurePhoto" />
+							<figcaption className="Explore-featureTitle">
+								<strong>{title}</strong>
+							</figcaption>
+						</figure>
+					))}
+				</div>
+			</Container>
 		</section>
 	);
 };

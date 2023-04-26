@@ -1,4 +1,25 @@
 .Page-footer {
+	background: var(--ti-color-light-grey);
+	padding-bottom: 2rem;
+}
+.Page-footerContent {
 	display: flex;
-	gap: 1rem;
+	flex-flow: row wrap;
+	justify-content: flex-end;
+}
+.Page-footerBranding {
+	flex: 1 1 50%;
+}
+.Page-footerNav {
+	flex: 0 0 auto;
+	margin: 0 1rem;
+}
+.Page-footer ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.Page-footer ul li {
+	margin: 0;
+	padding: 0;
 }

@@ -1,0 +1,20 @@
+.StepList {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.StepList-step {
+	border-radius: 0;
+	background: var(--ti-color-light-grey);
+	font-size: 1.9rem;
+	cursor: pointer;
+	padding: 1rem 2rem;
+}
+.StepList-step:focus {
+	outline: 2px solid var(--ti-focus-color);
+	box-shadow: inset 0 0 0 2px var(--ti-focus-text-color);
+}
+.StepList-step[aria-selected="true"] {
+	background: var(--ti-color-green);
+	color: white;
+}

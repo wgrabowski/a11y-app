@@ -7,8 +7,9 @@ module.exports = {
 		"eslint:recommended",
 		"plugin:react/recommended",
 		"plugin:@typescript-eslint/recommended",
+		"plugin:jsx-a11y/strict",
 		"prettier",
-		"plugin:jsx-a11y/strict"
+
 	],
 	"overrides": [
 	],
@@ -19,7 +20,8 @@ module.exports = {
 	},
 	"plugins": [
 		"react",
-		"@typescript-eslint"
+		"@typescript-eslint",
+		"jsx-a11y",
 	],
 	"rules": {
 		"indent": [
@@ -34,9 +36,8 @@ module.exports = {
 			"error",
 			"double"
 		],
-		"semi": [
-			"error",
-			"never"
-		]
+		"semi": "off",
+		"react/react-in-jsx-scope": "off"
+
 	}
 }

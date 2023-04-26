@@ -1,11 +1,10 @@
 .Story {
 	display: flex;
-
-	margin: 0 auto;
-	max-width: 90vw;
 	justify-content: space-between;
+	align-items: flex-start;
+	margin: 12rem 0;
 }
-.Story:nth-child(odd) {
+.Story:nth-child(even) {
 	flex-direction: row-reverse;
 }
 .Story-image {
@@ -15,5 +14,5 @@
 	flex: 0 1 30%;
 }
 .Story-caption {
-	flex: 0 1 30%;
+	flex: 0 1 40%;
 }

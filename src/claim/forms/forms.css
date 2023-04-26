@@ -13,9 +13,15 @@ textarea {
 input[type="radio"] {
 	float: left;
 	clear: left;
+	margin-right: 1rem !important;
 }
 input[type="radio"] + label {
 	float: left;
 	clear: right;
-	line-height: 40px;
+	line-height: 1;
+	height: 40px;
+}
+
+fieldset {
+	margin: 0;
 }

@@ -1,10 +1,13 @@
+import "./SiteLogo.css";
 import { NavLink } from "react-router-dom";
 
 export const PageLogo = () => {
 	return (
-		<NavLink to={"/"}>
-			<img src="" alt="" />
-			<h1>TheInsurer</h1>
-		</NavLink>
+		<h1 className={"SiteLogo"}>
+			<img src="public/vite.svg" alt="" className={"SiteLogo-image"} />
+			<NavLink to={"/"} className={"SiteLogo-link"}>
+				TheInsurer
+			</NavLink>
+		</h1>
 	);
 };

@@ -1,0 +1,10 @@
+.ContactUs-content {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	margin: 12rem auto 4rem;
+	justify-content: space-between;
+}
+.ContactUs-title {
+	margin: 0;
+}
