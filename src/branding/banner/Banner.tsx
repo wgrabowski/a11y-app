@@ -9,7 +9,7 @@ export const Banner = () => {
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
 					eiusmod tempor incididunt ut labore et dolore magna.
 				</p>
-				<button role="button" type="button" className={"Banner-action"}>
+				<button type="button" className={"Banner-action"}>
 					Order now
 				</button>
 			</Container>

@@ -23,13 +23,6 @@ export const ExpenseModal = ({
 	onSubmit,
 	onClose,
 }: ExpenseModalProps) => {
-	const [nameVal, setNameVal] = useState(name || "");
-	const [priceVal, setPriceVal] = useState(price || "");
-	const save = (event: FormEvent<HTMLFormElement>) => {
-		event.preventDefault();
-		onSubmit({ name: nameVal, price: Number(priceVal) });
-	};
-
 	const schema = yup
 		.object({
 			expenseName: yup.string().required("Enter expense name"),
@@ -49,19 +42,17 @@ export const ExpenseModal = ({
 		},
 	});
 	const onSave = (data: any) => {
-		console.log(data);
 		onSubmit(data);
 	};
 
 	return (
 		<FocusTrap active={open}>
-			<dialog tabIndex={0} open={open} className={"ExpenseModal"}>
+			<dialog open={open} className={"ExpenseModal"}>
 				<button
 					className={"ExpenseModal-closeButton"}
 					title="Close modal"
 					onClick={() => onClose()}
 					aria-label={"Close modal"}
-					autoFocus
 				>
 					<X role={"presentation"} />
 				</button>

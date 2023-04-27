@@ -59,7 +59,6 @@ export const IncidentDetails = ({
 								{...register("purpose")}
 								id={`purpose${index}`}
 								defaultChecked={index === 0}
-								aria-invalid={!!errors?.purpose}
 							/>
 							<label htmlFor={`purpose${index}`}>{value}</label>
 						</Fragment>

@@ -1,10 +1,11 @@
 import "./SiteLogo.css";
 import { NavLink } from "react-router-dom";
+import { Sunrise } from "react-feather";
 
 export const PageLogo = ({ level = 1 }: { level: 1 | 2 }) => {
-	let content = (
+	const content = (
 		<>
-			<img src="public/vite.svg" alt="" className={"SiteLogo-image"} />
+			<Sunrise role={"presentation"} color={"#1d70b8"} />
 			<NavLink to={"/"} className={"SiteLogo-link"}>
 				TheInsurer
 			</NavLink>
