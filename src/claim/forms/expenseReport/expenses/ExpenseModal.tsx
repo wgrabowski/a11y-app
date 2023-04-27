@@ -25,8 +25,8 @@ export const ExpenseModal = ({
 }: ExpenseModalProps) => {
 	const schema = yup
 		.object({
-			expenseName: yup.string().required("Enter expense name"),
-			expensePrice: yup.string().required("Enter expense price"),
+			expenseName: yup.string().required("Name of expense cannot be empty"),
+			expensePrice: yup.string().required("Price of expense cannot be empty"),
 		})
 		.required();
 	const {
@@ -63,7 +63,7 @@ export const ExpenseModal = ({
 						id="name"
 						{...register("expenseName")}
 						aria-required={true}
-						aria-labelledby={"error-expense-name"}
+						aria-describedby={"error-expense-name"}
 					/>
 					<ErrorMessage error={errors.expenseName} id={"error-expense-name"} />
 
@@ -75,7 +75,7 @@ export const ExpenseModal = ({
 						min={"0"}
 						{...register("expensePrice")}
 						aria-required={true}
-						aria-labelledby={"error-expense-price"}
+						aria-describedby={"error-expense-price"}
 					/>
 					<ErrorMessage
 						error={errors.expensePrice}

@@ -24,10 +24,12 @@ export const IncidentDetails = ({
 			purpose: yup.string().required("Select purpose of travel"),
 			country: yup
 				.string()
-				.required("Enter country in which incident happened"),
-			address: yup.string().required("Enter  address where incident happened"),
-			date: yup.string().required("Enter date on which incident happened"),
-			description: yup.string().required("Provide description of an incident"),
+				.required("Name of country in which incident happened cannot be empty"),
+			address: yup.string().required("Address of incident cannot be empty"),
+			date: yup.string().required("Date of incident has to be selected"),
+			description: yup
+				.string()
+				.required("Description of incident cannot be empty"),
 		})
 		.required();
 	const {
@@ -72,7 +74,7 @@ export const IncidentDetails = ({
 				id="country"
 				aria-invalid={!!errors?.country}
 				autoComplete={"country"}
-				aria-labelledby={"error-country"}
+				aria-describedby={"error-country"}
 			/>
 			<ErrorMessage error={errors.country} id={"error-country"} />
 
@@ -83,7 +85,7 @@ export const IncidentDetails = ({
 				id="address"
 				aria-invalid={!!errors?.address}
 				autoComplete={"street-address"}
-				aria-labelledby={"error-address"}
+				aria-describedby={"error-address"}
 			/>
 			<ErrorMessage error={errors.address} id={"error-address"} />
 
@@ -93,7 +95,7 @@ export const IncidentDetails = ({
 				{...register("date")}
 				id="date"
 				aria-invalid={!!errors?.date}
-				aria-labelledby={"error-date"}
+				aria-describedby={"error-date"}
 			/>
 			<ErrorMessage error={errors.date} id={"error-date"} />
 
@@ -104,7 +106,7 @@ export const IncidentDetails = ({
 				cols={30}
 				rows={10}
 				aria-invalid={!!errors?.description}
-				aria-labelledby={"error-description"}
+				aria-describedby={"error-description"}
 			/>
 			<ErrorMessage error={errors.description} id={"error-description"} />
 

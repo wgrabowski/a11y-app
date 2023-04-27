@@ -13,10 +13,10 @@ export const PersonalDetails = ({
 }: PersonalDetailsProps) => {
 	const schema = yup
 		.object({
-			firstName: yup.string().required("Enter your first name"),
-			lastName: yup.string().required("Enter your last name"),
-			birthday: yup.string().required("Enter your birthday date"),
-			email: yup.string().email("Enter your email address"),
+			firstName: yup.string().required("First name cannot be empty"),
+			lastName: yup.string().required("First name cannot be empty"),
+			birthday: yup.string().required("Birthday date has to be selected"),
+			email: yup.string().email("Valid email address have to be provided"),
 			phone: yup.string(),
 			policy: yup.string(),
 		})
@@ -48,7 +48,7 @@ export const PersonalDetails = ({
 				aria-required={"true"}
 				aria-invalid={!!errors?.firstName}
 				autoComplete={"given-name"}
-				aria-labelledby={"error-firstname"}
+				aria-describedby={"error-firstname"}
 			/>
 			<ErrorMessage error={errors.firstName} id={"error-firstname"} />
 
@@ -60,7 +60,7 @@ export const PersonalDetails = ({
 				aria-required={"true"}
 				aria-invalid={!!errors?.lastName}
 				autoComplete={"family-name"}
-				aria-labelledby={"error-lastname"}
+				aria-describedby={"error-lastname"}
 			/>
 			<ErrorMessage error={errors.lastName} id={"error-lastname"} />
 
@@ -71,7 +71,7 @@ export const PersonalDetails = ({
 				{...register("birthday")}
 				id="birthday"
 				aria-invalid={!!errors?.birthday}
-				aria-labelledby={"error-birthday"}
+				aria-describedby={"error-birthday"}
 				autoComplete={"bday"}
 			/>
 			<ErrorMessage error={errors.birthday} id={"error-birthday"} />
@@ -83,7 +83,7 @@ export const PersonalDetails = ({
 				{...register("phone")}
 				aria-invalid={!!errors?.phone}
 				autoComplete={"tel"}
-				aria-labelledby={"error-phone"}
+				aria-describedby={"error-phone"}
 			/>
 			<ErrorMessage error={errors.phone} id={"error-phone"} />
 
@@ -95,7 +95,7 @@ export const PersonalDetails = ({
 				{...register("email")}
 				aria-invalid={!!errors?.email}
 				autoComplete={"email"}
-				aria-labelledby={"error-email"}
+				aria-describedby={"error-email"}
 			/>
 			<ErrorMessage error={errors.email} id={"error-email"} />
 
@@ -105,7 +105,7 @@ export const PersonalDetails = ({
 				id="policy"
 				{...register("policy")}
 				aria-invalid={!!errors?.policy}
-				aria-labelledby={"error-policy"}
+				aria-describedby={"error-policy"}
 			/>
 			<ErrorMessage error={errors.policy} id={"error-policy"} />
 

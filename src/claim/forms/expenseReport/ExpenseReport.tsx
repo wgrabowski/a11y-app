@@ -26,6 +26,7 @@ export const ExpenseReport = ({
 		const newExpenses = [...expenses];
 		newExpenses.splice(index, 1);
 		setExpenses([...newExpenses]);
+		setCurrentAlert(null);
 		setCurrentAlert("Your expense has been successfully removed");
 	};
 
@@ -38,6 +39,7 @@ export const ExpenseReport = ({
 			},
 		]);
 		setAddModalOpen(false);
+		setCurrentAlert(null);
 		setCurrentAlert("Your expense has been successfully added");
 	};
 
@@ -55,6 +57,7 @@ export const ExpenseReport = ({
 					: exp
 			),
 		]);
+		setCurrentAlert(null);
 		setCurrentAlert("Your expense has been successfully updated");
 	};
 	return (
