@@ -1,6 +1,7 @@
 .Page {
 	display: flex;
 	flex-flow: column nowrap;
+	min-height: 100vh;
 	min-height: 100svh;
 }
 .Page-header,
@@ -10,4 +11,5 @@
 .Page-content {
 	flex: 1 1 100%;
 	padding: 0 0 8rem;
+	overflow: hidden;
 }

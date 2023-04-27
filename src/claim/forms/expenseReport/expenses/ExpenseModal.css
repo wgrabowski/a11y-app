@@ -12,6 +12,7 @@
 
 @media screen and (max-width: 900px) {
 	.ExpenseModal {
+		width: 94vw;
 		width: 94svw;
 		padding: 1rem;
 		top: 50%;
