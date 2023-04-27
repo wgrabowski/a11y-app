@@ -16,7 +16,9 @@ body {
 	background: var(--ti-background-color);
 	color: var(--ti-text-color);
 }
-
+body * {
+	box-sizing: border-box;
+}
 a:not(.button) {
 	color: var(--ti-link-color);
 	text-decoration: none;

@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { ErrorMessage } from "../../../shared/ui/fieldError/ErrorMessage";
 
 interface IncidentDetailsProps {
 	onCompleted: (step: number) => void;
@@ -21,10 +22,12 @@ export const IncidentDetails = ({
 	const schema = yup
 		.object({
 			purpose: yup.string().required("Select purpose of travel"),
-			country: yup.string().required("Enter your last name"),
-			address: yup.string().required(),
-			date: yup.string().email("Enter you email address"),
-			description: yup.string(),
+			country: yup
+				.string()
+				.required("Enter country in which incident happened"),
+			address: yup.string().required("Enter  address where incident happened"),
+			date: yup.string().required("Enter date on which incident happened"),
+			description: yup.string().required("Provide description of an incident"),
 		})
 		.required();
 	const {
@@ -71,7 +74,9 @@ export const IncidentDetails = ({
 				id="country"
 				aria-invalid={!!errors?.country}
 				autoComplete={"country"}
+				aria-labelledby={"error-country"}
 			/>
+			<ErrorMessage error={errors.country} id={"error-country"} />
 
 			<label htmlFor="address">address</label>
 			<input
@@ -80,7 +85,9 @@ export const IncidentDetails = ({
 				id="address"
 				aria-invalid={!!errors?.address}
 				autoComplete={"street-address"}
+				aria-labelledby={"error-address"}
 			/>
+			<ErrorMessage error={errors.address} id={"error-address"} />
 
 			<label htmlFor="date">date</label>
 			<input
@@ -88,7 +95,9 @@ export const IncidentDetails = ({
 				{...register("date")}
 				id="date"
 				aria-invalid={!!errors?.date}
+				aria-labelledby={"error-date"}
 			/>
+			<ErrorMessage error={errors.date} id={"error-date"} />
 
 			<label htmlFor="description">Incident description</label>
 			<textarea
@@ -97,7 +106,9 @@ export const IncidentDetails = ({
 				cols={30}
 				rows={10}
 				aria-invalid={!!errors?.description}
+				aria-labelledby={"error-description"}
 			/>
+			<ErrorMessage error={errors.description} id={"error-description"} />
 
 			<div className={"Form-actions"}>
 				<button
@@ -105,9 +116,9 @@ export const IncidentDetails = ({
 					type={"button"}
 					onClick={() => onCompleted(0)}
 				>
-					Back
+					Return
 				</button>
-				<button onClick={handleSubmit(onSubmit)}>Next</button>
+				<button onClick={handleSubmit(onSubmit)}>Continue</button>
 			</div>
 		</form>
 	);

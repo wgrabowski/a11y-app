@@ -41,15 +41,18 @@ input:not([type="radio"]),
 textarea {
 	border: 2px solid var(--ti-focus-text-color);
 	line-height: 1.25;
-	height: 2.5rem;
 	margin-top: 0;
-	padding: 5px;
+	padding: 0.5rem;
 	border-radius: 0;
 	-webkit-appearance: none;
 	appearance: none;
 }
+textarea {
+	height: auto;
+}
 
-input:focus-visible {
+input:focus,
+textarea:focus-visible {
 	outline: 3px solid var(--ti-focus-color);
 	box-shadow: inset 0 0 0 2px;
 }

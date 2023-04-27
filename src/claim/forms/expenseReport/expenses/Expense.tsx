@@ -7,7 +7,7 @@ interface ExpenseProps {
 	name: string;
 	price: number;
 	onRemove: () => void;
-	onEdit: (data: IncidentExpense) => void;
+	onEdit: (data: any) => void;
 }
 const currencyFormatter = new Intl.NumberFormat("en", {
 	currency: "eur",
@@ -20,23 +20,32 @@ export const Expense = ({ name, price, onRemove, onEdit }: ExpenseProps) => {
 	return (
 		<>
 			<li className={"Expense"}>
-				<strong>{currencyFormatter.format(price)}</strong>
+				<strong title={"Expense price"}>
+					{currencyFormatter.format(price)}
+				</strong>
 				<span>{name}</span>
-				<button className="icon" onClick={() => onRemove()}>
-					<X />
+				<button
+					className="icon"
+					onClick={() => onRemove()}
+					title={"Remove this expense"}
+				>
+					<X role={"presentation"} />
 				</button>
 				<button
 					className="icon"
 					onClick={() => setEditModalOpen(true)}
 					aria-haspopup={"dialog"}
+					title={"Edit this expense"}
 				>
-					<Edit />
+					<Edit role={"presentation"} />
 				</button>
 			</li>
 			{editModalOpen && (
 				<ExpenseModal
 					open={true}
 					onSubmit={onEdit}
+					name={name}
+					price={price}
 					onClose={() => setEditModalOpen(false)}
 				/>
 			)}

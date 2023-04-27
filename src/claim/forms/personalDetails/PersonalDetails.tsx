@@ -15,8 +15,8 @@ export const PersonalDetails = ({
 		.object({
 			firstName: yup.string().required("Enter your first name"),
 			lastName: yup.string().required("Enter your last name"),
-			birthday: yup.string(),
-			email: yup.string().email("Enter you email address"),
+			birthday: yup.string().required("Enter your birthday date"),
+			email: yup.string().email("Enter your email address"),
 			phone: yup.string(),
 			policy: yup.string(),
 		})
@@ -48,8 +48,9 @@ export const PersonalDetails = ({
 				aria-required={"true"}
 				aria-invalid={!!errors?.firstName}
 				autoComplete={"given-name"}
+				aria-labelledby={"error-firstname"}
 			/>
-			<ErrorMessage error={errors.firstName} />
+			<ErrorMessage error={errors.firstName} id={"error-firstname"} />
 
 			<label htmlFor="second-name">Second name</label>
 			<input
@@ -59,17 +60,21 @@ export const PersonalDetails = ({
 				aria-required={"true"}
 				aria-invalid={!!errors?.lastName}
 				autoComplete={"family-name"}
+				aria-labelledby={"error-lastname"}
 			/>
-			<ErrorMessage error={errors.lastName} />
+			<ErrorMessage error={errors.lastName} id={"error-lastname"} />
 
 			<label htmlFor="birthday">Birthday</label>
 			<input
 				type="date"
+				min={"1900-01-01"}
 				{...register("birthday")}
 				id="birthday"
 				aria-invalid={!!errors?.birthday}
+				aria-labelledby={"error-birthday"}
+				autoComplete={"bday"}
 			/>
-			<ErrorMessage error={errors.birthday} />
+			<ErrorMessage error={errors.birthday} id={"error-birthday"} />
 
 			<label htmlFor="phone-number">Phone number</label>
 			<input
@@ -77,9 +82,10 @@ export const PersonalDetails = ({
 				id="phone-number"
 				{...register("phone")}
 				aria-invalid={!!errors?.phone}
-				autoComplete={"phone"}
+				autoComplete={"tel"}
+				aria-labelledby={"error-phone"}
 			/>
-			<ErrorMessage error={errors.birthday} />
+			<ErrorMessage error={errors.phone} id={"error-phone"} />
 
 			<label htmlFor="email">Email</label>
 			<input
@@ -89,8 +95,9 @@ export const PersonalDetails = ({
 				{...register("email")}
 				aria-invalid={!!errors?.email}
 				autoComplete={"email"}
+				aria-labelledby={"error-email"}
 			/>
-			<ErrorMessage error={errors.email} />
+			<ErrorMessage error={errors.email} id={"error-email"} />
 
 			<label htmlFor="policy">Policy number</label>
 			<input
@@ -98,11 +105,12 @@ export const PersonalDetails = ({
 				id="policy"
 				{...register("policy")}
 				aria-invalid={!!errors?.policy}
+				aria-labelledby={"error-policy"}
 			/>
-			<ErrorMessage error={errors.policy} />
+			<ErrorMessage error={errors.policy} id={"error-policy"} />
 
 			<div className={"Form-actions"}>
-				<button onClick={handleSubmit(onSubmit)}>Next</button>
+				<button onClick={handleSubmit(onSubmit)}>Continue</button>
 			</div>
 		</form>
 	);

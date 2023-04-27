@@ -2,6 +2,12 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
+	gap: 1rem;
+}
+@media only screen and (max-width: 900px) {
+	.StepList {
+		flex-direction: column;
+	}
 }
 .StepList-step {
 	border-radius: 0;

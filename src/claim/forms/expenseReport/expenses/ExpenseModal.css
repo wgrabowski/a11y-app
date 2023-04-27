@@ -1,8 +1,6 @@
 .ExpenseModal {
 	width: 80ch;
 	padding: 4rem;
-	overflow: hidden;
-	position: relative;
 	border: 2px solid var(--ti-color-black);
 }
 .ExpenseModal-closeButton {
@@ -10,4 +8,14 @@
 	top: 0;
 	right: 0;
 	margin: 0;
+}
+
+@media screen and (max-width: 900px) {
+	.ExpenseModal {
+		width: 94svw;
+		padding: 1rem;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
 }

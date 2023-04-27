@@ -3,16 +3,27 @@
 	padding-bottom: 2rem;
 }
 .Page-footerContent {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: flex-end;
+	display: grid;
+	grid-template: "branding menu1 menu2 menu3" auto;
+	grid-template-columns: 1fr auto auto auto;
+}
+@media only screen and (max-width: 900px) {
+	.Page-footerContent {
+		grid-template:
+			"branding" auto
+			"menu1" auto
+			"menu2" auto
+			"menu3" auto;
+		grid-template-columns: 1fr;
+	}
 }
 .Page-footerBranding {
-	flex: 1 1 50%;
+	grid-area: branding;
 }
 .Page-footerNav {
 	flex: 0 0 auto;
 	margin: 0 1rem;
+	grid-area: menu;
 }
 .Page-footer ul {
 	list-style: none;

@@ -6,7 +6,7 @@ export const Header = () => {
 	return (
 		<header className="Page-header" role="banner" aria-label={"Page header"}>
 			<Container className="Page-headerContent">
-				<PageLogo />
+				<PageLogo level={1} />
 				<nav className={"Page-headerNav"} aria-label={"Main"}>
 					<NavLink className="Page-headerNavLink" to={"/"}>
 						Insurance
@@ -17,7 +17,10 @@ export const Header = () => {
 					>
 						About us
 					</NavLink>
-					<NavLink className="Page-headerNavLink" to={"/report"}>
+					<NavLink
+						className="Page-headerNavLink"
+						to={{ pathname: "/report", search: "?title=Claim report" }}
+					>
 						Claim report
 					</NavLink>
 					<NavLink

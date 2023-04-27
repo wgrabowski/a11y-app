@@ -4,7 +4,10 @@ import { Container } from "../shared/layout/container/Container";
 export const ClaimReportView = () => {
 	return (
 		<Container>
-			<h2 id={"claims-header"} style={{ margin: "0 auto" }}>
+			<h2
+				id={"claims-header"}
+				style={{ margin: "0 auto", textAlign: "center" }}
+			>
 				Claim report
 			</h2>
 			<ClaimReportForm />

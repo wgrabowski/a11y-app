@@ -10,6 +10,10 @@ interface ExpenseReportProps {
 	onSubmit: () => void;
 }
 
+interface expenseFormValue {
+	expenseName: string;
+	expensePrice: string;
+}
 export const ExpenseReport = ({
 	onCompleted,
 	onSubmit,
@@ -25,20 +29,37 @@ export const ExpenseReport = ({
 		setCurrentAlert("Your expense has been successfully removed");
 	};
 
-	const addExpense = (expense: IncidentExpense) => {
-		setExpenses((expenses) => [...expenses, expense]);
+	const addExpense = ({ expenseName, expensePrice }: expenseFormValue) => {
+		setExpenses((expenses) => [
+			...expenses,
+			{
+				name: expenseName,
+				price: Number(expensePrice),
+			},
+		]);
 		setAddModalOpen(false);
 		setCurrentAlert("Your expense has been successfully added");
 	};
 
-	const editExpense = (index: number, expense: IncidentExpense) => {
+	const editExpense = (
+		index: number,
+		{ expenseName, expensePrice }: expenseFormValue
+	) => {
 		setExpenses((expenses) => [
-			...expenses.map((exp, indx) => (indx === index ? expense : exp)),
+			...expenses.map((exp, indx) =>
+				indx === index
+					? {
+							name: expenseName,
+							price: Number(expensePrice),
+					  }
+					: exp
+			),
 		]);
 		setCurrentAlert("Your expense has been successfully updated");
 	};
 	return (
 		<>
+			<h3>Expense report</h3>
 			<ul>
 				{expenses.map(({ name, price }, index) => {
 					return (
@@ -73,9 +94,9 @@ export const ExpenseReport = ({
 					type={"button"}
 					onClick={() => onCompleted(1)}
 				>
-					Back
+					Return
 				</button>
-				<button onClick={() => onSubmit()}>Next</button>
+				<button onClick={() => onSubmit()}>Submit</button>
 			</div>
 			<div role="alert" aria-live="assertive" className={"Alert"}>
 				{currentAlert && (

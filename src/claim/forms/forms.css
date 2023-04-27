@@ -1,6 +1,6 @@
 input {
-	height: 40px;
-	padding: 0 1em;
+	height: 4rem;
+	padding: 0 1rem;
 }
 
 input,
@@ -9,7 +9,12 @@ textarea {
 	float: left;
 	clear: both;
 }
-
+label {
+	text-transform: capitalize;
+}
+textarea {
+	height: auto;
+}
 input[type="radio"] {
 	float: left;
 	clear: left;
@@ -19,7 +24,7 @@ input[type="radio"] + label {
 	float: left;
 	clear: right;
 	line-height: 1;
-	height: 40px;
+	height: 4rem;
 }
 
 fieldset {

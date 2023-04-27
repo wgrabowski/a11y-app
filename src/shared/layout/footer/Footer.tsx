@@ -17,7 +17,7 @@ export const Footer = () => {
 	const linkList = (links: string[]) => (
 		<ul>
 			{links.map((link) => (
-				<li>
+				<li key={link}>
 					<Link
 						to={{
 							pathname: `/page/${link
@@ -40,17 +40,29 @@ export const Footer = () => {
 		>
 			<Container className="Page-footerContent">
 				<div className="Page-footerBranding">
-					<PageLogo />
+					<PageLogo level={2} />
 				</div>
-				<nav className="Page-footerNav" aria-labelledby={"aboutus-links"}>
+				<nav
+					className="Page-footerNav"
+					aria-labelledby={"aboutus-links"}
+					style={{ gridArea: "menu1" }}
+				>
 					<h3 id="aboutus-links">About us</h3>
 					{linkList(bottomLinks[0])}
 				</nav>
-				<nav className="Page-footerNav" aria-labelledby={"products-links"}>
+				<nav
+					className="Page-footerNav"
+					aria-labelledby={"products-links"}
+					style={{ gridArea: "menu2" }}
+				>
 					<h3 id="products-links">Products</h3>
 					{linkList(bottomLinks[1])}
 				</nav>
-				<nav className="Page-footerNav" aria-labelledby={"members-links"}>
+				<nav
+					className="Page-footerNav"
+					aria-labelledby={"members-links"}
+					style={{ gridArea: "menu3" }}
+				>
 					<h3 id="members-links">Members</h3>
 					{linkList(bottomLinks[2])}
 				</nav>
