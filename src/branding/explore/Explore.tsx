@@ -27,7 +27,7 @@ export const Explore = () => {
 				<div className="Explore-features">
 					{images.map(({ url, title }, index) => (
 						<figure key={index} className="Explore-feature">
-							<img src={url} alt={title} className="Explore-featurePhoto" />
+							<img src={url} alt={""} className="Explore-featurePhoto" />
 							<figcaption className="Explore-featureTitle">
 								<strong>{title}</strong>
 							</figcaption>
