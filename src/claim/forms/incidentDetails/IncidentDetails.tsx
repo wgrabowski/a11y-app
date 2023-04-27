@@ -40,7 +40,6 @@ export const IncidentDetails = ({
 	});
 	const onSubmit = (data: any) => {
 		onCompleted(2);
-		console.log(data);
 	};
 	return (
 		<form

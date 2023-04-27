@@ -45,7 +45,6 @@ export const ClaimReportForm = () => {
 						}
 					}}
 					onValidityChange={(valid) => {
-						console.log(valid);
 						setSecondStepValid(valid);
 					}}
 				/>

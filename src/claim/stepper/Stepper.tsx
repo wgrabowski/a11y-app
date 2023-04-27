@@ -39,7 +39,6 @@ export const Stepper = ({
 	};
 
 	useEffect(() => {
-		console.log(currentStep, submittedStep);
 		if (submittedStep !== null && canStepBeEntered(submittedStep)) {
 			setCurrentStep(submittedStep);
 		}
