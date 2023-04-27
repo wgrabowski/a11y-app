@@ -27,7 +27,10 @@ export const ExpenseReport = ({
 		newExpenses.splice(index, 1);
 		setExpenses([...newExpenses]);
 		setCurrentAlert(null);
-		setCurrentAlert("Your expense has been successfully removed");
+		setTimeout(
+			() => setCurrentAlert("Your expense has been successfully removed"),
+			0
+		);
 	};
 
 	const addExpense = ({ expenseName, expensePrice }: expenseFormValue) => {
@@ -40,7 +43,10 @@ export const ExpenseReport = ({
 		]);
 		setAddModalOpen(false);
 		setCurrentAlert(null);
-		setCurrentAlert("Your expense has been successfully added");
+		setTimeout(
+			() => setCurrentAlert("Your expense has been successfully added"),
+			0
+		);
 	};
 
 	const editExpense = (
@@ -58,7 +64,10 @@ export const ExpenseReport = ({
 			),
 		]);
 		setCurrentAlert(null);
-		setCurrentAlert("Your expense has been successfully updated");
+		setTimeout(
+			() => setCurrentAlert("Your expense has been successfully updated"),
+			0
+		);
 	};
 	return (
 		<>
